@@ -3,4 +3,4 @@
 Front-end do projeto.
 
 ![Resume cv](/prev.PNG)
-![Resume cv](/listaprev.PNG.PNG)
+![Resume cv](/listaprev.PNG)
