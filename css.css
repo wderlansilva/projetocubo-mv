@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* resetar css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* váriaveis css */
+
+:root {
+  --hue-color: 200;
+
+
+  --cwhite:#fff;
+  --first-color:hsl(var(--hue-color), 51%, 26%) ;
+  --first-color-alt:hsl(var(--hue-color), 51%, 21%) ;
+  --first-color-lighter:hsl(var(--hue-color), 51%, 78%) ;
+  --title-color:hsl(var(--hue-color), 51%, 5%) ;
+  --ctitle:hsl(var(--hue-color), 0%, 0%) ;
+  --body-lighter:hsl(var(--hue-color), 51%, 96%) ;
+
+  /* fontes */
+  --body-font:'Poppins', sans-serif;
+
+  --font-medium:500 ;
+  --font-semi-bold:600 ;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--cwhite);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: .8rem;
+  margin:1rem 2rem 11rem 2rem;
+}
+
+.social__icon{
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  color: var(--first-color);
+}
+.social__icon:hover{
+  color: var(--first-color-alt);
+}
+
+#main {
+  background-color: var(--body-lighter);
+  /* border: 1px solid rgba(122, 120, 120, 0.684); */
+  margin: 0 1rem;
+  color: var(--ctitle);
+  border-radius: 12px;
+}
+
+#section h2 {
+  text-align: center;
+  padding: 2rem ;
+}
+
+#formContent form{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  color: var(--cwhite);
+}
+
+#formContent form input{
+  width: 100%;
+  background-color: var(--first-color-lighter);
+  font-family: var(--body-font);
+  outline: none;
+  border-radius: 3px;
+  border: none;
+  padding: .25rem .5rem .5rem 0;
+  color: var(--cwhite);
+  
+}
+
+.contact__content {
+  background-color: var(--first-color-lighter);
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+  margin-bottom: 1rem;
+}
+
+.contact__content-item{
+  background-color: var(--first-color-lighter);
+  border-radius: .5rem;
+  padding: .75rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.contact__content-item span{
+  font-size: .8rem;
+}
+
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding-bottom: 4rem;
+}
+
+#buttons button {
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  padding: .5rem 2rem;
+  border: none;
+  color: var(--cwhite);
+  border-radius: .3rem;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+}
+.icon__button {
+  font-size: 1.5rem;
+  margin-right: .3rem;
+}
+
+.icon__button-alt{
+  font-size: 1.5rem;
+  margin-right: -.2rem;
+}
+.button__alt{
+  color: black;
+}
+.button__alt:hover{
+  color: var(--first-color-lighter);
+  transition: .2s;
+}
+
+#buttons button:hover{
+  background-color: var(--first-color-alt);
+  transition: .3s;
+  cursor: pointer;
+}
+/* lista de participantes */
+
+#tableHead th{
+  text-align: left;
+  padding-right: 6rem;
+}
+
+.button-back{
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.button-back {
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  padding: 0.5rem 2rem;
+  color: var(--cwhite);
+  border-radius: 0.3rem;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+}
+
+/* media queries */
+/* small */
+@media screen and (min-width: 350px){
+  #header{
+    margin: 1rem 2rem 7rem 2rem;
+  }
+  #header h1{
+    font-size: 1.2rem;
+  }
+  .social__icon{
+    font-size: 1.5rem;
+    padding-left: 0.1rem;
+  }
+
+  #section h2{
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  #table{
+    margin-left: 0.5rem;
+  }
+  #formContent form{
+    margin: 1rem 1rem;
+  }
+  #formContent label{
+    font-size: 0.9rem;
+  }
+  #buttons{
+    padding-bottom: 2rem;
+  }
+  #buttons button{
+    padding: 0.5rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .icon__button{
+    font-size: 0.9rem;
+  }
+  .button__alt{
+    font-size: 0.8rem;
+  }
+  .icon__button-alt{
+    font-size: 0.9rem;
+  }
+}
+/* medium */
+@media screen and (min-width: 768px){
+  body{
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+/* large */
+@media screen and (min-width: 1024px){
+  body{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #header {
+    margin: 1rem 4rem 11rem 4rem;
+  }
+
+  #main {
+    margin: 0 5rem;
+  }
+  #buttons{
+    margin: 0 6rem;
+  }
+}
